@@ -14,22 +14,22 @@ branches:
     - develop
 
     #sebelum melakukan instal
-    before_install:
-      - wget https://phar.phpunit.de/phpunit-6.5.phar
-      - chmod +X phpunit-6.5.phar
+before_install:
+  - wget https://phar.phpunit.de/phpunit-6.5.phar
+  - chmod +X phpunit-6.5.phar
 
-    #proses install
-    install: 
-      - sudo mv phpunit-6.5.phar phpunit
+#proses install
+install: 
+  - sudo mv phpunit-6.5.phar phpunit
 
-    #before_script (sebelum script dijalankan)
-    before_script:
-      - ./phpunit --version
+#before_script (sebelum script dijalankan)
+before_script:
+  - ./phpunit --version
 
-    #script (main execution)
-    script:
+#script (main execution)
+script:
 
-    #setelah main exeution selesai
-    after_succes:
+#setelah main exeution selesai
+after_succes:
 
       
